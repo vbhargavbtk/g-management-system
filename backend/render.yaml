@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pg-management-system-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - fromGroup: pg-management-system
