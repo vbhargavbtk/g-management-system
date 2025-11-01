@@ -1,6 +1,7 @@
 'use client';
 
 import { Admin, Resource } from 'react-admin';
+import 'react-admin/dist/styles.css';
 import dataProvider from './dataProvider';
 import authProvider from './authProvider';
 import Dashboard from './Dashboard';
