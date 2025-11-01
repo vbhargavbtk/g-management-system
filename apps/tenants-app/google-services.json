@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583617067337",
+    "project_id": "pg-management-system-2d085",
+    "storage_bucket": "pg-management-system-2d085.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583617067337:android:9a838604e0549d32848298",
+        "android_client_info": {
+          "package_name": "com.pgmanagementsystem.tenantsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUCSMT_AK3jhmdL9oeua1JV2uiLkos1g8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

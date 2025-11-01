@@ -1,7 +1,5 @@
-import dynamic from 'next/dynamic';
-
-const AdminApp = dynamic(() => import('../components/AdminApp'), { ssr: false });
+import AdminWrapper from '../components/AdminWrapper';
 
 export default function Home() {
-  return <AdminApp />;
+  return <AdminWrapper />;
 }
