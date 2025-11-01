@@ -24,7 +24,7 @@ export default async function Rooms() {
             <h2 className="text-2xl font-bold mb-2">Room {room.roomNumber}</h2>
             <p>Capacity: {room.capacity}</p>
             <p>Rent: ₹{room.rent} / month</p>
-            <p>Status: <span className={`capitalize font-bold ${room.status === 'available' ? 'text-green-600' : 'text-red-600'}`}>{room.status}</span></p>
+            <p>Status: <span className={`capitalize font-bold ${room.status === 'available' ? 'text-secondary' : 'text-accent'}`}>{room.status}</span></p>
           </div>
         ))}
       </div>

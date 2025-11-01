@@ -4,13 +4,11 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white">
+      <section className="bg-primary text-white">
         <div className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-5xl font-bold mb-4">Find Your Perfect PG</h1>
           <p className="text-xl mb-8">Comfortable and affordable living for students and professionals.</p>
-          <Link href="/apply" className="bg-white text-blue-600 px-8 py-3 rounded-md font-bold hover:bg-gray-200">
-            Apply Now
-          </Link>
+          <button className="bg-secondary text-white px-8 py-3 rounded-md font-bold hover:bg-emerald-600">Learn More</button>
         </div>
       </section>
 
