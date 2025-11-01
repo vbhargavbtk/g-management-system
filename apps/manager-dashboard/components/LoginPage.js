@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLogin, useNotify } from 'react-admin';
+import { useLogin, useNotify, TextInput, Button } from 'react-admin';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -9,7 +9,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    login({ username: email, password }).catch(() =>
+    login({ email, password }).catch(() =>
       notify('Invalid email or password')
     );
   };
@@ -18,19 +18,23 @@ const LoginPage = () => {
     <div>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <input
-          name="email"
+        <TextInput
+          source="email"
+          label="Email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          fullWidth
         />
-        <input
-          name="password"
+        <TextInput
+          source="password"
+          label="Password"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          fullWidth
         />
-        <button type="submit">Login</button>
+        <Button type="submit" label="Login" fullWidth />
       </form>
     </div>
   );
