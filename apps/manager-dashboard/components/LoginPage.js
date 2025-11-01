@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLogin, useNotify, TextInput, Button } from 'react-admin';
+import { useLogin, useNotify, TextInput, Button, Login } from 'react-admin';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -15,28 +15,30 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <TextInput
-          source="email"
-          label="Email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          fullWidth
-        />
-        <TextInput
-          source="password"
-          label="Password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          fullWidth
-        />
-        <Button type="submit" label="Login" fullWidth />
-      </form>
-    </div>
+    <Login>
+      <div>
+        <h1>Login</h1>
+        <form onSubmit={handleSubmit}>
+          <TextInput
+            source="email"
+            label="Email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            fullWidth
+          />
+          <TextInput
+            source="password"
+            label="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            fullWidth
+          />
+          <Button type="submit" label="Login" fullWidth />
+        </form>
+      </div>
+    </Login>
   );
 };
 
