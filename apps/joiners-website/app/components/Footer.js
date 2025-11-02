@@ -2,7 +2,7 @@ import { pgInfo } from '@shared/constants/pg-info.js';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-neutral-800 text-neutral-50 py-8">
       <div className="container mx-auto px-4">
         <div className="flex justify-between">
           <div>
@@ -14,9 +14,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold">Quick Links</h3>
             <ul>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/rooms">Rooms</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about" className="text-neutral-300 hover:text-primary">About Us</a></li>
+              <li><a href="/rooms" className="text-neutral-300 hover:text-primary">Rooms</a></li>
+              <li><a href="/contact" className="text-neutral-300 hover:text-primary">Contact</a></li>
             </ul>
           </div>
         </div>
