@@ -1,0 +1,16 @@
+{
+  "name": "pg-management-system-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "backend"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev:joiners-website": "npm run dev --workspace=apps/joiners-website",
+    "dev:manager-dashboard": "npm run dev --workspace=apps/manager-dashboard",
+    "dev:backend": "npm run dev --workspace=backend",
+    "start:tenants-app": "npm start --workspace=apps/tenants-app"
+  }
+}
