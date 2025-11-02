@@ -4,11 +4,18 @@ import RazorpayCheckout from 'react-native-razorpay';
 
 const PaymentsScreen = () => {
   const handlePayment = () => {
+    const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID; // Access from environment variables
+
+    if (!RAZORPAY_KEY_ID || RAZORPAY_KEY_ID === 'YOUR_RAZORPAY_KEY_ID') {
+      alert('Razorpay Key ID is not configured. Please configure it in the .env file.');
+      return;
+    }
+
     const options = {
       description: 'Rent Payment',
       image: 'https://i.imgur.com/3g7nmJC.png',
       currency: 'INR',
-      key: 'YOUR_RAZORPAY_KEY_ID', // TODO: Replace with your Razorpay key
+      key: RAZORPAY_KEY_ID,
       amount: '5000', // TODO: Replace with the actual amount
       name: 'My Awesome PG',
       prefill: {

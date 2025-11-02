@@ -1,7 +1,7 @@
 import simpleRestProvider from 'ra-data-simple-rest';
 import axios from 'axios';
 
-const API_URL = 'https://pg-management-system-backend-xrux.onrender.com/api';
+const API_URL = 'http://localhost:5000/api';
 
 const dataProvider = simpleRestProvider(API_URL, (url, options = {}) => {
   if (!options.headers) {
